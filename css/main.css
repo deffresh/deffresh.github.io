@@ -82,7 +82,7 @@ img {
     background-attachment:fixed;
     background-repeat:no-repeat;
     position:relative;
-    min-height: 1012px;
+    min-height: auto;
 }
 .bg-overlay {
     position:absolute;
