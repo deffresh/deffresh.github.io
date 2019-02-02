@@ -46,15 +46,16 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Display the result in the element with id="demo"
-      document.getElementById("demo").innerHTML = "<span class='timer-number-days'>" + days + "</span><br> <span class='timer-words-days'>DAYS</span><br><span class='timer-number'>" + hours + "</span><span class='timer-words'>HRS</span> : <span class='timer-number'>"
+      document.getElementById("demo").innerHTML = "<span class='timer-number-days'>" + days + " DAYS</span><br><span class='timer-number'>" + hours + "</span><span class='timer-words'>HRS</span> : <span class='timer-number'>"
       + minutes + "</span><span class='timer-words'>MINS</span> : <span class='timer-number'>" + seconds + "</span><span class='timer-words'>SECS</span>";
 
       // If the count down is finished, write some text 
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "<span class='timer-number-days' style='color:#fff;font-size: 20px;letter-spacing: 2px;font-weight: 400;'>0</span><span class='timer-words-days' style='color:#fff;font-size: 10px;letter-spacing: 0px;font-weight: 400;'>DAYS</span>   <span class='timer-number' style='color:#fff;font-weight: 400;'>0</span><span class='timer-words' style='color:#fff;font-weight: 400;'>HRS</span>   <span class='timer-number' style='color:#fff;font-weight: 400'>0</span><span class='timer-words' style='color:#fff;font-weight: 400;'>MINS</span>   <span class='timer-number' style='color:#fff;font-weight: 400'>0</span><span class='timer-words' style='color:#fff;font-weight: 400;'>SECS</span>";
-        document.getElementById("sold-out").innerHTML = "<span class='timer-number-days' style='color:red;font-size: 18px;letter-spacing: 2px;font-weight: 900;'>ALL SOLD OUT!</span>";
+        document.getElementById("sold-out").innerHTML = "<span class='timer-number-days' style='background-color: red; color:white;padding: 0 10px 5px 10px;font-size: 24px;letter-spacing: -2px;font-weight: 900;'>SOLD OUT!</span>";
         document.getElementById("shop-now").innerHTML = "";
+        document.getElementById("counter").innerHTML = "";
       }
     }, 1000);
     </script>
@@ -110,19 +111,31 @@
             <div class="text-right" style="padding-top:110px">
             <!--<div class="center text-right" style="padding-top:50px">-->
                 <div class="container" style="text-align:center;">
+                    <div class="subtitle"><h4 style="font-size: 11px; letter-spacing: 3px;font-weight:800">DEFFRESH'S <span style="background-color:yellow; color:black">LIMITED RELEASE:</span></h4></div>
                     <div class="banner">
-                        <h1 class="condensed">THIS MONTH'S TEE</h1>
+                        <h1 class="condensed" style="font-size: 32px;letter-spacing: -3px;padding-bottom: 10px; font-weight:900">SAVE THE QUEEN TEE</h1>
                     </div>                    
-                    <div class="subtitle"><h4>ONE EXCLUSIVE TEE A MONTH</h4></div>
-                    <div class="" style="color:#fff; font-size: 11px; font-weight:900; padding:15px 0 10px 0;">TIME LEFT BUY THIS TEE:</div>
                     
-                    <p id="demo" class="countdown" style="margin-bottom:0"></p>
+                    <div id="counter">
+                    <div class="" style="color:#fff; font-size: 11px; font-weight:900; padding:15px 0 10px 0;">LIMITED RELEASE ENDS IN:</div>
+                    <p id="demo" class="countdown" style="margin-bottom:10px"></p>
+                    </div>
+                    
                     <div id="sold-out"></div>
-                    <div class="subtitle" style="margin: auto; width: 65%; padding-bottom:20px"><img src="https://cdn.shopify.com/s/files/1/1405/8192/products/party-and-bull_1000x1500.png?v=1527200512" width="275" /></div>                        
+                    <div class="subtitle" style="margin: auto; width: 85%; padding-bottom:20px"><img src="https://cdn.shopify.com/s/files/1/1405/8192/products/save-the-queen_1000x1500.png" width="375" /></div>                        
                     
                         <div id="shop-now">
-                            <button onclick="window.location.href='march.html'" class="btn"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;SHOP NOW</button>
+                            <button onclick="window.location.href='exclusive.html'" class="btn">
+                                <!--<i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;-->
+                                
+                                CHOOSE SIZE</button>
                         </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <br>
                     <br>
                 </div>
@@ -140,7 +153,7 @@
             <div class="row">
                 
                 <div class="col-sm-4" style="width:100%; font-size: 10px; font-weight: 300; color: #cccccc; padding-top:10px">
-                    Copyright &copy; 2018 Main &amp; Might LLC, All Rights Reserved.     
+                    Copyright &copy; 2019 Main &amp; Might LLC, All Rights Reserved.     
                 </div>
                 
                 
